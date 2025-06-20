@@ -4,7 +4,7 @@
   --card: #ffffff;
   --income: #000;      /* changed from #4caf50 */
   --expense: #f44336;
-  --accent: #000;      /* changed from green to black */
+  --accent: #000;      
   --border-radius: 12px;
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
