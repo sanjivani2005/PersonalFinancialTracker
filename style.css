@@ -1,7 +1,7 @@
 :root {
   --primary: #0077ff;
   --income: #22c55e;
-  --expense: #ef4444; 
+  --expense: #ef4444;
   --card-bg: rgba(255, 255, 255, 0.15);
   --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
   --glass-border: 1px solid rgba(255, 255, 255, 0.18);
@@ -21,7 +21,7 @@ body {
 }
 
 body.dark {
-  background: linear-gradient(135deg, #121212, #1f1f1f);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Modern Blue Gradient */
   color: var(--text-light);
 }
 
@@ -160,21 +160,21 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
-  color: #777;
+  color: #aaa;
   margin-top: 40px;
 }
 
-/* Dark Mode Tweaks */
+/* Dark Mode Styling */
 body.dark .summary-box,
 body.dark .card,
 body.dark form,
 body.dark #transactionList li {
-  background: rgba(30, 30, 30, 0.6);
+  background: rgba(25, 35, 55, 0.5);
   color: var(--text-light);
 }
 
 body.dark button {
-  background: #2563eb;
+  background: #3399ff;
 }
 
 @media (max-width: 768px) {
