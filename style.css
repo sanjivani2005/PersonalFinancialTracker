@@ -1,0 +1,126 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #222;
+  --card: #fff;
+  --income: #4caf50;
+  --expense: #f44336;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #eee;
+  --card: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.logo img {
+ height: 50px;
+  width: 50px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;   /* Ensures the image covers the area without distortion */
+  border: 2px solid #4caf50; /* Optional: adds a nice green border */
+}
+
+input, select, button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--card);
+}
+
+#userIntro {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#brandOutput {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+form, #filters, #downloadSection, #planFinance {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#summary {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.summary-box {
+  flex: 1 1 30%;
+  background-color: var(--card);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.income {
+  color: var(--income);
+}
+
+.expense {
+  color: var(--expense);
+}
+
+.balance {
+  font-weight: bold;
+}
+
+#transactionList {
+  list-style: none;
+  padding: 0;
+}
+
+#planFinance {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  #summary {
+    flex-direction: column;
+  }
+
+  .summary-box {
+    flex: 1 1 100%;
+  }
+}

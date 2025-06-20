@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartMoney - Personal Finance Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="money-logo.png" type="image/png">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="freepik__the-smartmoney-logo-in-black-incorporating-a-subtl__46802.png" alt="SmartMoney Logo">
+        <h1>SmartMoney</h1>
+      </div>
+      <button id="themeToggle">🌙</button>
+    </header>
+
+    <section id="userIntro">
+      <h2>Welcome to SmartMoney!</h2>
+      <p>Enter your name to personalize your finance app:</p>
+      <input type="text" id="userName" placeholder="Enter your name..." />
+      <div id="brandOutput"></div>
+    </section>
+
+    <section id="summary">
+      <div class="summary-box income">Income: ₹<span id="totalIncome">0</span></div>
+      <div class="summary-box expense">Expense: ₹<span id="totalExpense">0</span></div>
+      <div class="summary-box balance">Balance: ₹<span id="balance">0</span></div>
+    </section>
+
+    <form id="transactionForm">
+      <input type="text" id="description" placeholder="Description" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <select id="category" required>
+        <option value="" disabled selected>Select Category</option>
+        <option value="Salary">Salary</option>
+        <option value="Groceries">Groceries</option>
+        <option value="Utilities">Utilities</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Health">Health</option>
+        <option value="Savings">Savings</option>
+        <option value="Others">Others</option>
+      </select>
+      <button type="submit">Add Transaction</button>
+    </form>
+
+    <section id="filters">
+      <input type="date" id="filterDate" />
+      <select id="filterCategory">
+        <option value="">All Categories</option>
+        <option value="Salary">Salary</option>
+        <option value="Groceries">Groceries</option>
+        <option value="Utilities">Utilities</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Health">Health</option>
+        <option value="Savings">Savings</option>
+        <option value="Others">Others</option>
+      </select>
+    </section>
+
+    <ul id="transactionList"></ul>
+
+    <section id="downloadSection">
+      <button id="exportCSV">💾 Export to CSV</button>
+      <button id="clearData">🗑️ Clear All Data</button>
+    </section>
+
+    <section id="planFinance">
+      <h3>Plan Your Finance</h3>
+      <input type="number" id="plannedSalary" placeholder="Monthly Salary" />
+      <input type="number" id="plannedSpending" placeholder="Planned Spending" />
+      <input type="number" id="plannedSavings" placeholder="Planned Savings" />
+      <input type="text" id="futureGoals" placeholder="Future Financial Goal (e.g., Buy a Laptop)" />
+      <button onclick="generatePlan()">Generate Financial Plan</button>
+      <div id="planOutput"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
